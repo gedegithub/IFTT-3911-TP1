@@ -1,0 +1,1 @@
+-- arrow association between Admin & companies, routes, etc.

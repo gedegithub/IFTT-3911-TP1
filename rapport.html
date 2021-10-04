@@ -1,9 +1,10 @@
 <!-- saved from url=(0060)http://www-ens.iro.umontreal.ca/~syriani/courses/rapport.htm -->
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>IFT2255 DM1 Syriani</title>
+    <title>IFT-3911 - Devoir 1 - Système de Réservation de Voyages</title>
     <style type="text/css">
         table {
             border: outset 2px black;
@@ -26,31 +27,40 @@
 
 <body>
     <h1 style="text-align: center;">
-        IFT 2255 - Devoir 1</h1>
+        IFT-3911 - Devoir 1</h1>
     <h2>
         Information générale</h2>
     <p>
-        <span style="font-weight: bold;">Nom: </span>Eugene Syriani
+        <span style="font-weight: bold;">Nom: </span>Louis Bertrand
         <br>
-        <span style="font-weight: bold;">Matricule: </span>1234
+        <span style="font-weight: bold;">Matricule: </span>20141254
         <br>
-        <span style="font-weight: bold;">Courriel: </span>syriani@iro.umontreal.ca
+        <span style="font-weight: bold;">Courriel: </span>louis.bertrand@umontreal.ca
         <br>
         <span style="font-weight: bold;">temps mis: </span>40 heures
     </p>
     <p>
-        <span style="font-weight: bold;">Nom: </span>John Smith
+        <span style="font-weight: bold;">Nom: </span>Ronald Gedeon
         <br>
-        <span style="font-weight: bold;">Matricule: </span>5678
+        <span style="font-weight: bold;">Matricule: </span>20142399
         <br>
-        <span style="font-weight: bold;">Courriel: </span>john.smith@something.com
+        <span style="font-weight: bold;">Courriel: </span>ronald.gedeon@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Dave Sanon-Abraham
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>?
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>dave.ferly.sanon-abraham@umontreal.ca
         <br>
         <span style="font-weight: bold;">temps mis: </span>40 heures
     </p>
     <h2>
         Distribution des tâches</h2>
     <p>
-        <span style="font-weight: bold;">Soumetteur: </span>Eugene Syriani
+        <span style="font-weight: bold;">Soumetteur: </span>Ronald Gédéon
     </p>
     <table cellpadding="7px">
         <thead>
@@ -59,34 +69,71 @@
                     Tâche
                 </th>
                 <th>
-                    Eugene
+                    Ronald
                 </th>
                 <th>
-                    John
+                    Bertrand
+                </th>
+                <th>
+                    Dave
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td class="first_col">
-                    Diagramme de classe
+                    Modèle du domaine
                 </td>
                 <td>
                     Classes, associations, attributs (50%)
                 </td>
                 <td>
-                    Methodes, contraintes (50%)
+                    Méthodes (50%)
+                </td>
+                <td>
+                    Contraintes (50%)
                 </td>
             </tr>
             <tr>
                 <td class="first_col">
-                    Implémentation
+                    Diagramme Séquence Système
                 </td>
                 <td>
-                    GUI (30%)
+                    Admin (50%)
                 </td>
                 <td>
-                    Logique (70%)
+                    Client (50%)
+                </td>
+                <td>
+                    Admin / Client (20%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Modèle du design
+                </td>
+                <td>
+                    Méthodes & Diagramme Séquence (50%)
+                </td>
+                <td>
+                    Logique & Diagramme Séquence (50%)
+                </td>
+                <td>
+                    Diagramme Séquence (20%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    OCL
+                </td>
+                <td>
+                    (20%)
+                </td>
+                <td>
+                    (20%)
+                </td>
+                <td>
+                    (60%)
                 </td>
             </tr>
         </tbody>
@@ -94,25 +141,70 @@
     <h2>
         Hypothèses</h2>
     <p>
-        J'ai supposé que...
+        De prime abord, nous avons opté pour une nomenclature de classes en anglais, afin de faciliter la lisibilité des
+        diagrammes.
     </p>
     <h2>
         Tâche 1</h2>
     <p>
-        Voici ma solution pour la tâche 1.
+        Voici les diagrammes de la tâche 1.
     </p>
-    <ul>
-        <li>Voici un <a href="http://www-ens.iro.umontreal.ca/~syriani/courses/file1.txt">lien</a> vers les fichiers.
-        </li>
-        <li>Images affichées directement.</li>
-    </ul>
-    <img src="./brain.jpg" alt="image_brain" width="500px" alt="some image">
+    <h3>1. Modèle du domaine</h3>
+    <img src="./Domaine/ModeleDomaine.png" alt="Modele-Domaine">
+    <hr>
+    <h3>2. Diagramme Séquence Système Admin</h3>
+    <img src="./Domaine/DSS-admin.png" alt="DSS-admin">
+    <hr>
+    <h3>3. Diagramme Séquence Système Client</h3>
+    <img src="./Domaine/DSS-client.png" alt="DSS-client">
+    <hr>
     <h2>
         Tâche 2</h2>
     <p>
-        ...
+        Voici les diagrammes de la tâche 2.
     </p>
-
+    <h3>4. Modèle du design</h3>
+    <img src="./Design/ModeleDesign.png" alt="Modele-Design">
+    <hr>
+    <h3>4. Diagrammes de Séquence</h3>
+    <hr>
+    <h4>4.1 CreateCompany</h4>
+    <hr>
+    <h4>4.2 CreateStation</h4>
+    <hr>
+    <h4>4.3 CreateCraft</h4>
+    <hr>
+    <h4>4.4 CreateRoute</h4>
+    <hr>
+    <h4>4.5 UpdateCompany</h4>
+    <hr>
+    <h4>4.6 UpdateStations</h4>
+    <hr>
+    <h4>4.7 UpdateCraft</h4>
+    <hr>
+    <h4>4.8 UpdateRoute</h4>
+    <hr>
+    <h4>4.9 DeleteCompany</h4>
+    <hr>
+    <h4>4.10 DelateStation</h4>
+    <hr>
+    <h4>4.11 DeleteCraft</h4>
+    <hr>
+    <h4>4.12 DeleteRoute</h4>
+    <hr>
+    <h4>4.13 AssignPrice</h4>
+    <hr>
+    <h4>4.14 ConsultRoutes</h4>
+    <hr>
+    <h4>4.15 MakeReservation</h4>
+    <hr>
+    <h4>4.16 PayReservation</h4>
+    <hr>
+    <h2>
+        Tâche 3</h2>
+    <p>
+        Contraintes OCL.
+    </p>
 
 </body>
 
