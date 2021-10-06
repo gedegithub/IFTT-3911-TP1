@@ -1,0 +1,20 @@
+avion
+1-Un aéroport est identifié par trois lettres uniques à chaque aéroport [OCL]
+2-La partie alphabétique de l'ID d'un vol est unique à chaque compagnie et la partie numérique est unique à chaque vol au sein de la même compagnie [OCL]. 
+3-L'aéroport de départ et d'arrivée d'un vol doit être différent [OCL].
+4-Tous les sièges d'une même section ont le même prix [OCL].
+bateau
+5-Un port est identifié par trois lettres uniques à chaque port [OCL].
+6- Un itinéraire ne peut pas durer plus de 21 jours [OCL].
+7-Chaque itinéraire visite une suite de ports fixes. Le port de départ et d'arrivée doit être le même [OCL].
+8-Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas [OCL]
+9-Toutes les cabines d'une même section ont le même prix 
+10-Une gare est identifiée par trois lettres uniques à chaque gare [OCL]. 
+Client
+11-Le client peut réserver un siège disponible dans un vol (ligne) donné [OCL]. 
+12-Le client peut réserver un siège disponible dans un voyage (ligne) donné [OCL].
+13-Le client peut réserver un siège disponible dans un vol (ligne) donné [OCL].
+14- Un siège réservé devient assigné à un passager une fois payé: le siège est donc confirmé [OCL]
+15-Le client peut réserver une cabine disponible pour un itinéraire donné [OCL].
+
+
