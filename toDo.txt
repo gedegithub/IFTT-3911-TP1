@@ -1,0 +1,1 @@
+add getter / setter in design model
