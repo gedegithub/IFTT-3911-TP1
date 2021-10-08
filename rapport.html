@@ -22,6 +22,14 @@
         .first_col {
             border-right: double 2px black;
         }
+
+        img {
+            max-width: 100%;
+        }
+
+        pre {
+            font-size: 25px;
+        }
     </style>
 </head>
 
@@ -180,35 +188,34 @@
     <img src="./Design/sequence-diagram-payment.png" alt="Sequence-Diagram-Payment">
     <hr>
     <h3>5. Diagrammes de Paquets</h3>
+    <img src="./Design/package-diagram.png" alt="Diagramme-de-Paquet">
     <hr>
     <h2>
-        Tâche 3</h2>
-    <p>
-        Contraintes OCL.
+        Tâche 3 - Contraintes OCL.</h2>
     <pre>
-        1) Le id d'une Airline doit être composée de 3 chiffres
+        <strong>1) Le id d'une Airline doit être composée de 3 lettres</strong>
         
         context AirLine inv:
             not self.line_id.toInteger().isUndefined()
             and self.line_id.length = 3
             and self.allInstances() -> isUnique(line_id)
         
-        2) La partie alphabétique de l'ID d'un vol est unique à chaque compagnie et la partie numérique est unique à chaque vol au sein de la même compagnie [OCL].
+        <strong>2) La partie alphabétique de l'ID d'un vol est unique à chaque compagnie et la partie<br> numérique est unique à chaque vol au sein de la même compagnie [OCL].</strong>
         
         context Airline inv:
             self.
         
-        3) L'aéroport de départ et d'arrivée d'un vol doit être différent [OCL].
+        <strong>3) L'aéroport de départ et d'arrivée d'un vol doit être différent [OCL].</strong>
         
         context RouteDescription inv :
             not self.origin = self.destination
             
-        4) Tous les sièges d'une même section ont le même prix [OCL].
+        <strong>4) Tous les sièges d'une même section ont le même prix [OCL].</strong>
         
         context section inv:
             self.seats->forAll(price = self.price)
         
-        5) Un port est identifié par trois lettres uniques à chaque port [OCL].
+        <strong>5) Un port est identifié par trois lettres uniques à chaque port [OCL].</strong>
         
         context Port inv:
             not self.line_id.toInteger().isUndefined()
@@ -216,53 +223,53 @@
             and self.allInstances() -> isUnique(line_id)
             
             
-        6) Un itinéraire ne peut pas durer plus de 21 jours [OCL].
+        <strong>6) Un itinéraire ne peut pas durer plus de 21 jours [OCL].</strong>
         
         context trajectory inv:
             self.arrivalDate - self.routeDescription.departureDate() <= 21 
         
-        7) Chaque itinéraire visite une suite de ports fixes. Le port de départ et d'arrivée doit être le même [OCL].
+        <strong>7) Chaque itinéraire visite une suite de ports fixes. Le port de départ et d'arrivée<br>  doit être le même [OCL].</strong>
         
         context trajectory inv: 
             self.origin=self.destination 
             
-        8) Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas [OCL] 
+        <strong>8) Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas [OCL].</strong> 
         
-        9)Toutes les cabines d'une même section ont le même prix. 
+        <strong>9)Toutes les cabines d'une même section ont le même prix.</strong> 
         
         context section inv: 
             self.cabines->forAll(price = self.price)
         
-        10)Une gare est identifiée par trois lettres uniques à chaque gare [OCL].
+        <strong>10)Une gare est identifiée par trois lettres uniques à chaque gare [OCL].</strong>
     
         context TrainStation inv:
             not self.line_id.toInteger().isUndefined()
             and self.line_id.length = 3
             and self.allInstances() -> isUnique(line_id)
     
-        11-Le client peut réserver un siège disponible dans un vol (ligne) donné [OCL].
+        <strong>11-Le client peut réserver un siège disponible dans un vol (ligne) donné [OCL].</strong>
     
         context Flight inv:
             self.craft.sections.seats()-> isUnique(reservation-s.client)
     
-        12-Le client peut réserver un siège disponible dans un voyage (train) donné [OCL].
+        <strong>12-Le client peut réserver un siège disponible dans un voyage (train) donné [OCL].</strong>
     
         context Trajectory inv:
             self.craft.sections.seats()-> isUnique(reservation.client)
     
-        14- Un siège réservé devient assigné à un passager une fois payé: le siège est donc confirmé [OCL]
+        <strong>14- Un siège réservé devient assigné à un passager une fois payé: le siège est donc confirmé [OCL].</strong>
     
         Context Reservation-S :: makePayment()
             pre: self.estPaye = false
             post: self.estPaye = true
     
-        15-Le client peut réserver une cabine disponible pour un itinéraire donné [OCL].
+        <strong>15-Le client peut réserver une cabine disponible pour un itinéraire donné [OCL].</strong>
     
         context Trajectory inv:
             self.craft.sections.cabines()-> isUnique(reservation.client)
 
         </pre>
-    </p>
+
 
 </body>
 
