@@ -1,0 +1,165 @@
+<!-- saved from url=(0060)http://www-ens.iro.umontreal.ca/~syriani/courses/rapport.htm -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>IFT-3911 - Devoir 1 - Système de Réservation de Voyages</title>
+    <style type="text/css">
+        table {
+            border: outset 2px black;
+            border-collapse: collapse;
+        }
+
+        th {
+            border-bottom: double 2px black;
+        }
+
+        td {
+            border-bottom: solid 1px black;
+        }
+
+        .first_col {
+            border-right: double 2px black;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        pre {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">
+        IFT-3911 - Devoir 1</h1>
+    <h2>
+        Information générale</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Louis Bertrand
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20141254
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>louis.bertrand@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Ronald Gedeon
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20142399
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>ronald.gedeon@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Dave Sanon-Abraham
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20174672
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>dave.ferly.sanon-abraham@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <h2>
+        Distribution des tâches</h2>
+    <p>
+        <span style="font-weight: bold;">Soumetteur: </span>Ronald Gédéon
+    </p>
+    <table cellpadding="7px">
+        <thead>
+            <tr>
+                <th class="first_col">
+                    Tâche
+                </th>
+                <th>
+                    Ronald
+                </th>
+                <th>
+                    Bertrand
+                </th>
+                <th>
+                    Dave
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first_col">
+                    Réseau de Pétri
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Statechart
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Design UML
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>
+        Hypothèses</h2>
+
+    <h2>
+        Tâche 1: Modélisation d'un systeme 'Tunnel' en un Réseau de Pétri</h2>
+    <img src="./ReseauDePetri/reseauDePetri.png" alt="Réseau de Pétri">
+    <p>Pour le réseau de Pétri, on a opté pour une nomenclature en anglais qui se veut très intuitive. De manière
+        générale, l'équité est une propriété du réseau, car après qu'une voiture provenant d'un côté ait terminé de
+        transiter, le système impose automiquement le tour à la voiture se situant du côté opposé. Cette conception
+        implique une source infinie de voitures déjà en attente de part et d'autre du tunnel. Toutefois, pour gérer des
+        cas particuliers d'ordre naturel, à savoir laisser les voitures arriver aléatoirement, il convient d'apporter
+        quelques modifications au réseau. En ce sens, c'est important de placer un temporizateur aux deux lumieres (t =
+        60 secondes) leur permettant de s'alterner mutuellement en état de `idle`, c'est-à-dire pour éviter la famine
+        dans le système dans le cas qu'il n'y pas de voitures qui arrivent d'un côté pendant un certain temps. </p>
+    <hr>
+    <h2>
+        Tâche 2: Modélisation d'un four à micro-onde en un StateChart</h2>
+    <hr>
+    <h2>
+        Tâche 3: Application des principes de conception et Evaluation du design</h2>
+    <hr>
+    <p>
+        Voici les diagrammes.
+    </p>
+    <h3>1. Modèle du design</h3>
+    <img src="./Design/ModeleDesign.png" alt="Modele-Design">
+    <hr>
+
+</body>
+
+</html>
