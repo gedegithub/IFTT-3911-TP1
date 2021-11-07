@@ -138,14 +138,19 @@
     <h2>
         Tâche 1: Modélisation d'un systeme 'Tunnel' en un Réseau de Pétri</h2>
     <img src="./ReseauDePetri/reseauDePetri.png" alt="Réseau de Pétri">
-    <p>Pour le réseau de Pétri, on a opté pour une nomenclature en anglais qui se veut très intuitive. De manière
+    <p>Pour le réseau de Pétri, on a opté pour une nomenclature en anglais qui se veut très intuitive. Notre conception
+        implique comme hypothese q'une source infinie de voitures qui arrivent selon un ordre et se mettent
+        automatiquement en attente de part et d'autre du tunnel, de telle sorte que la méthode FIFO soit utilisée pour
+        les desservir. De manière
         générale, l'équité est une propriété du réseau, car après qu'une voiture provenant d'un côté ait terminé de
-        transiter, le système impose automiquement le tour à la voiture se situant du côté opposé. Cette conception
-        implique une source infinie de voitures déjà en attente de part et d'autre du tunnel. Toutefois, pour gérer des
-        cas particuliers d'ordre naturel, à savoir laisser les voitures arriver aléatoirement, il convient d'apporter
+        transiter, le système impose automiquement le tour à la voiture se situant du côté opposé. Toutefois, pour gérer
+        des
+        cas particuliers d'ordre naturel, à savoir laisser les voitures arriver aléatoirement, il conviendrait
+        d'apporter
         quelques modifications au réseau. En ce sens, c'est important de placer un temporizateur aux deux lumieres (t =
         60 secondes) leur permettant de s'alterner mutuellement en état de `idle`, c'est-à-dire pour éviter la famine
-        dans le système dans le cas qu'il n'y pas de voitures qui arrivent d'un côté pendant un certain temps. </p>
+        dans le système dans l'éventuel cas qu'il n'y pas de voitures qui arrivent d'un côté pendant un certain temps.
+    </p>
     <hr>
     <h2>
         Tâche 2: Modélisation d'un four à micro-onde en un StateChart</h2>
