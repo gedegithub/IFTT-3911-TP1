@@ -149,21 +149,13 @@
     <h2>
         Hypothèses</h2>
     <p>
-        De prime abord, nous avons opté pour une nomenclature de classes en anglais, afin de faciliter la lisibilité des
-        diagrammes. La visibilité abstraite des classes `Company`, `Stations`, `Route` et `Craft` est dans le but d'une
-        part de factoriser la conception et de porter attentions sur la nomenclature de l'énoncé et de l'autre
-        d'appliquer les principes de conceptions LSV et OCL, ce qui va aussi faciliter la maintenabilité à l'avenir.
+        Plusieurs changements ont été apportés au design dans le but d'amélioré la conception. Entre autres, nous avons éliminé les classes descriptives du modèle, ajouté une énumération pour les différentes types de section et enlevé la répétition pour la classe Admin. Aussi, nous avons ajouté deux autres contraintes OCL pour spécifier que les cabines appartiennent aux bateaux seulement et que les seats appartiennent soit aux avions ou aux trains. 
     </p>
     <p>
-        Les classes abstraites n'ont pas de constructeur puisqu'elles ne peuvent pas être instanciées. Toutefois, la
-        plupart des classes ont des `getters` et des `setters` et à quelques exception près, nous avons jugé de mettre
-        la visibilité d'attibuts de certaines classes à publique afin qu'elle soit accédées par d'autres classes.
+    Les principes de conceptions SRP, LSV et OCL sont respectés. `Admin` reste l'expert des classes héritant des classes abstraites telles que Route, Company, Craft et Stations. 
     </p>
     <p>
-        Pour le moment, nous avons jugé bon que ça soit la classe `Admin` qui definisse les 4 classes mentionnées plus
-        haut, pour garder une certaine simplicité dans la conception à ce premier stade. A l'avenir, nous pourrions
-        toujours alleger les responsabilites de `Admin` dans l'objectif de mettre en application
-        les bonnes pratiques de conception, entre autres le SRP.
+        Pour le moment, nous avons jugé bon que ça soit la classe 
     </p>
     <p>
         Par ailleurs, nous avons mis une interface pour la classe `Client` afin de bien faire ressortir le fait qu'il
