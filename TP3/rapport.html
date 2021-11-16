@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>IFT-3911 - Devoir 1 - Système de Réservation de Voyages</title>
+    <style type="text/css">
+        table {
+            border: outset 2px black;
+            border-collapse: collapse;
+        }
+
+        th {
+            border-bottom: double 2px black;
+        }
+
+        td {
+            border-bottom: solid 1px black;
+        }
+
+        .first_col {
+            border-right: double 2px black;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        pre {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">
+        IFT-3911 - Devoir 3</h1>
+    <h2>
+        Information générale</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Louis Bertrand
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20141254
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>louis.bertrand@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Ronald Gedeon
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20142399
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>ronald.gedeon@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Dave Sanon-Abraham
+        <br>
+        <span style="font-weight: bold;">Matricule: </span>20174672
+        <br>
+        <span style="font-weight: bold;">Courriel: </span>dave.ferly.sanon-abraham@umontreal.ca
+        <br>
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <h2>
+        Distribution des tâches</h2>
+    <p>
+        <span style="font-weight: bold;">Soumetteur: </span>Ronald Gédéon
+    </p>
+    <table cellpadding="7px">
+        <thead>
+            <tr>
+                <th class="first_col">
+                    Tâche
+                </th>
+                <th>
+                    Ronald
+                </th>
+                <th>
+                    Bertrand
+                </th>
+                <th>
+                    Dave
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first_col">
+                    Modèle du domaine
+                </td>
+                <td>
+                    Classes, Design, Diagrammes (50%)
+                </td>
+                <td>
+                    Classes, Design, Diagrammes (50%)
+                </td>
+                <td>
+                    Design, Contraintes OCL (20%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Diagramme Séquence Système
+                </td>
+                <td>
+                    Admin (50%)
+                </td>
+                <td>
+                    Client (30%)
+                </td>
+                <td>
+                    Admin / Client (20%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Modèle du design
+                </td>
+                <td>
+                    Méthodes & Diagramme Séquence Payer (100%)
+                </td>
+                <td>
+                    Logique & Diagramme Séquence Consulter (100%)
+                </td>
+                <td>
+                    Diagramme Séquence Reserver (100%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    OCL
+                </td>
+                <td>
+                    (30%)
+                </td>
+                <td>
+                    (40%)
+                </td>
+                <td>
+                    (30%)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>
+        Système de réservation de voyages</h1>
+
+    <h2>Diagramme de Design du système avec les 8 Patrons de conception</h2>
+    <img src="./design/design-systeme.png" alt="Design du Système">
+    <hr>
+    <h2>Discussion de la qualité de conception</h2>
+    <p>Principes et evaluation de conception</p>
+    <h2>Diagramme de Paquets</h2>
+    <img src="./design/diagramme-paquet.png" alt="Diagramme de Paquet">
+    <hr>
+    <h2>Design Logiciel</h2>
+    <h3>Diagramme de classe pour le patron de fabriques</h3>
+    <img src="./design/diagrammeC-fabrique.png" alt="Diagramme de Classe pour patron de fabrique">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de fabriques</h3>
+    <img src="./design/diagrammeS-fabrique.png" alt="Diagramme de Séquence pour le patron de fabrique">
+    <hr>
+
+    <h3>Diagramme de classe pour le patron de singleton</h3>
+    <img src="./design/diagrammeC-singleton.png" alt="Diagramme de Classe pour patron de singleton">
+    <hr>
+    <!-- <h3>Diagramme de Séquence pour le patron de singleton</h3>
+    <img src="./design/diagrammeS-fabrique.png" alt="Diagramme de Séquence pour le patron de singleton">
+    <hr> -->
+
+    <h3>Diagramme de classe pour le patron d'état</h3>
+    <img src="./design/diagrammeC-etat.png" alt="Diagramme de Classe pour patron de d'état">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de d'état</h3>
+    <img src="./design/diagrammeS-etat.png" alt="Diagramme de Séquence pour le patron d'état">
+    <hr>
+
+    <h3>Diagramme de classe pour le patron de l'observateur</h3>
+    <img src="./design/diagrammeC-observateur.png" alt="Diagramme de Classe pour patron de l'observateur">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de l'observateur</h3>
+    <img src="./design/diagrammeS-observateur.png" alt="Diagramme de Séquence pour le patron de l'observateur">
+    <hr>
+
+    <h3>Diagramme de classe pour le patron de commande</h3>
+    <img src="./design/diagrammeC-commande.png" alt="Diagramme de Classe pour patron de de commande">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de commande</h3>
+    <img src="./design/diagrammeS-commande.png" alt="Diagramme de Séquence pour le patron de commande">
+    <hr>
+
+    <h3>Diagramme de classe pour le patron de visiteur</h3>
+    <img src="./design/diagrammeC-visiteur.png" alt="Diagramme de Classe pour patron de de visiteur">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de visiteur</h3>
+    <img src="./design/diagrammeS-visiteur.png" alt="Diagramme de Séquence pour le patron de visiteur">
+    <hr>
+
+    <h3>Diagramme de classe pour les 2 patrons additionnels</h3>
+    <img src="./design/diagrammeC-patron1&2.png" alt="Diagramme de Classe pour les 2 patrons additionnels">
+    <hr>
+    <h2>
+        Contraintes OCL.</h2>
+    <pre>
+        <strong>1) Le id d'une `Airport` doit être composé de 3 lettres uniques à chaque aéroport</strong>
+        
+        context Airport inv:
+            oclType(self.id.toUpperCase()) = String
+            and self.id.size() = 3
+            and self.allInstances() -> isUnique(id)
+        
+        <strong>2) La partie alphabétique de l'ID d'un vol est unique à chaque compagnie et la partie numérique est unique à chaque vol au sein de la même compagnie [OCL].</strong>
+        
+        context Flight inv:
+            oclType(self.route_id.substring(1,3).toUpperCase()) = String
+            and oclType(self.route_id.substring(3,sel.route_id.size()).toInteger()) = Integer
+            and self.routeDescription.company.allInstances() -> isUnique(self.route_id.substring(1, 3))
+            and self.allInstances() -> forAll(n, m | n.route_id.substring(3,n.route_id.size()) = m.route_id.substring(3,m.route_id.size()) implies n = m)
+        
+        <strong>3) L'aéroport de départ et d'arrivée d'un `flight` doit être différent [OCL].</strong>
+        
+        context RouteDescription inv :
+            not self.origin = self.destination
+            
+        <strong>4) Tous les sièges d'une même section ont le même prix [OCL].</strong>
+        
+        context Sections inv:
+            self.seats -> forAll(price = self.price)
+        
+        <strong>5) Un port est identifié par trois lettres uniques à chaque port [OCL].</strong>
+        
+        context Port inv:
+            oclType(self.id.toUpperCase()) = String
+            and self.id.size() = 3
+            and self.allInstances() -> isUnique(id)
+                    
+        <strong>6) Un itinéraire ne peut pas durer plus de 21 jours [OCL].</strong>
+        
+        context Itinerary inv:
+            self.arrivalDate - self.routeDescription.departureDate() <= 21 
+        
+        <strong>7) Chaque itinéraire visite une suite de ports fixes. Le port de départ et d'arrivée doit être le même [OCL].</strong>
+        
+        context Itinerary:: RouteDescription inv:
+            self.origin = self.destination
+            and self.station.excluding(self.origin) > 0
+             
+            
+        <strong>8) Un paquebot peut être assigné à plusieurs itinéraires tant qu'ils ne se chevauchent pas [OCL].</strong> 
+        
+            context Ship inv:
+            self.itineray.allInstances -> forAll(a, b | a.departureDate < b.departureDate implies a.arrivalDate < b.departureDate)
+
+        <strong>9)Toutes les cabines d'une même section ont le même prix.</strong> 
+        
+        context Sections inv: 
+            self.cabines -> forAll(price = self.price)
+        
+        <strong>10)Une gare est identifiée par trois lettres uniques à chaque gare [OCL].</strong>
+    
+        context TrainStation inv:
+            oclType(self.id.toUpperCase()) = String
+            and self.id.size() = 3
+            and self.allInstances() -> isUnique(id)
+    
+        <strong>11-Le client peut réserver un siège disponible dans un vol (ligne) donné [OCL].</strong>
+    
+        context Flight inv:
+            self.craft.sections.seats.forAllInstances() -> isUnique(reservation.client)
+    
+        <strong>12-Le client peut réserver un siège disponible dans un voyage (train) donné [OCL].</strong>
+    
+        context Trajectory inv:
+            self.craft.sections.seats.forAllInstances() -> isUnique(reservation.client)
+    
+        <strong>13- Un siège réservé devient assigné à un passager une fois payé: le siège est donc confirmé [OCL].</strong>
+    
+        Context Reservation :: makePayment() 
+            pre: self.estPaye = false
+            post: self.estPaye = true
+    
+        <strong>14-Le client peut réserver une cabine disponible pour un itinéraire donné [OCL].</strong>
+    
+        context Itinerary inv:
+            self.craft.sections.cabines.forAllIstances() -> isUnique(reservation.client)
+
+        </pre>
+
+
+</body>
+
+</html>
