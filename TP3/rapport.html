@@ -187,6 +187,11 @@
         alt="Diagramme de Séquence pour le patron de Fabrique Abstraite">
     <hr>
     <p>
+        L'utilisation du patron de Fabrique fait en sorte que nous pouvons déléguer la création des Crafts, Company,
+        Station et
+        Route à une classe séparée de l'administration, ce qui nous permet de réduire le couplage en l'administration et
+        ces
+        classes.
         La Fabrique Abstraite s'avère un bon choix dans l'éventuel cas de changement au niveau des familles de produits.
         En effet, ce patron permet la maintenance, car respecte le principe d'OCP (ajout d'autres familles). Aussi, on
         peut reutiliser les fabriques en dehors de l'application meme. Et, le DIP est respecté également. En effet,
@@ -215,7 +220,12 @@
     <img src="./design/SequenceDiagram-State.png" alt="Diagramme de Séquence pour le patron d'état">
     <hr>
     <p>
-
+        Ce patron nous a permis d'appliquer l'OCP et le DIP, car on peut facilement ajouter de nouveaux états pour un
+        siège sans changer le code de la classe Seat et les états dependent d'une interface d'état. L'utilisation du
+        patron d'état nous permet de ne pas avoir à implémenter plusieurs fonctionnalités pour une méthode
+        updateState de la classe Seats. Par ailleurs, ce
+        patron a permis à notre design de bien gérer le comportement dynamique des classes clientes à la classe Seats
+        suivant son état spécifique.
     </p>
 
     <h3>Diagramme de classe pour le patron d'Observateur</h3>
@@ -231,10 +241,22 @@
     <h3>Diagramme de classe pour le patron de Commande & Memento</h3>
     <img src="./design/ClassDiagram-Command&Memento.png" alt="Diagramme de Classe pour patron de de commande & memento">
     <hr>
-    <h3>Diagramme de Séquence pour le patron de Commande & Memento</h3>
-    <img src="./design/SequenceDiagram-Commande.png" alt="Diagramme de Séquence pour le patron de commande & memento">
+    <h3>Diagramme de Séquence pour le patron de Commande</h3>
+    <img src="./design/SequenceDiagram-Command.png" alt="Diagramme de Séquence pour le patron de commande & memento">
     <hr>
     <p>
+        L'implémentation du patron de commande nous permet de respecter de respecter l'OCP en déplaçant toutes les
+        méthodes qui
+        se trouvaient auparavant dans la classe admin vers des classes utilisant l'interface AdminCommand. Cela fait en
+        sorte
+        que si l'on veut rajouter de nouvelles commandes, il n'est plus nécessaire de toucher à la classe admin et on
+        évite
+        d'avoir des dizaines de méthodes dans une seule classe comme c'était le cas dans l'itération précédente du
+        projet.
+        L'utilisation du patron de memento nous sert à enregistrer les modifications apportées au système par
+        l'administrateur.
+        À chaque opération, un mémento est créé et la commande RestoreCommand restore le dernier mémento créé.
+
 
     </p>
 
@@ -251,6 +273,12 @@
     <img src="./design/ClassDiagram-Builder.png" alt="Diagramme de Classe pour le patron de constructeur">
     <hr>
     <p>
+        Le patron du constructeur a été choisi pour effectuer la fabrication des Crafts, car leur fabrication est quelle
+        que peu
+        complexe puisque les crafts sont composés de sections qui sont elles-même composées de sièges ou de cabines. En
+        apppliquant le patron du constructeur, on encapsule la création des crafts et n'avons pas à toucher à la
+        fabrique si la
+        composition des crafts vient à changer.
 
     </p>
     <h2>Diagramme de Paquets</h2>
