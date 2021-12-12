@@ -198,7 +198,7 @@
         les fabriques concrètes dependent de la fabrique abstraite et au lieu de faire appel à l'operation new, on
         invoque les méthodes de fabrication. Et, en deleguant l'instanciation des objets à fabriquer aux fabriques
         concrètes, on applique le SRP dans les fabriques. Ce qui contribue somme toute à une très bonne cohésion au
-        niveau des fabriques. C'est sûr qu'une forte cohésion entraine un faible couplage, mais c'est un compromis qui
+        niveau des fabriques. C'est sûr qu'une forte cohésion entraine un fort couplage, mais c'est un compromis qui
         vaut la peine.
     </p>
     <hr>
@@ -235,7 +235,16 @@
     <img src="./design/SequenceDiagram-Observer.png" alt="Diagramme de Séquence pour le patron de l'observateur">
     <hr>
     <p>
+        Le patron d'observateur nous a permis de bien syncrhroniser notre système de base de données, le client et
+        l'administrateur de façon à ce que tout opération visant à changer l'état du système soit mise à jour et
+        notifiée. C'est une fonctionalité nouvelle pour notre application. Ce patron nous a permis aussi de maintenir
+        une forte cohérence entre les différents objets reliés sans pour autant les rendre trop couplés. Enfin, le DIP
+        est respecté (les observateurs AdminView et ClientView) implémentent l'interface du sujet. On peut facilement
+        ajouter de nouvelles vues ou observateurs (repect de l'OCP). Et ce modèle respecte finalemnt le CRP, qui
+        priorise la délégation sur l'héritage.
 
+        Notre implémentation de ce patron a préféré la méthode pull au lieu de push. En ce sens, AdminView et ClientView
+        après chaque notification vont se mettre à jour de façon asynchrone, c'est-à-dire au moment opportun pour eux.
     </p>
     <hr>
     <h3>Diagramme de classe pour le patron de Commande & Memento</h3>
@@ -267,7 +276,12 @@
     <img src="./design/SequenceDiagram-Visitor.png" alt="Diagramme de Séquence pour le patron de visiteur">
     <hr>
     <p>
-
+        Avec ce patron on a pu effectuer, selon un format donné, une operation de recherche sur une structure de base de
+        donnees des voyages sans avoir a implementer cette fonctionnalité dans chacune des classe de parcours. On
+        pourrait eventuellement ajouter facilement d'autres opérations au besoin. Ce qui respecte l'OCP. Les classes
+        sont très cohésives (respect du SRP), mais l'augmentation du couplage reste manifeste. C'est un trafe-off qui
+        vaut la peine. Finalement, le patron de visiteur suppose que notre structure de données reste inchangée, sinon
+        l'utilisation du patron ne sera plus optimale, car on devra changer tous les visiteurs.
     </p>
     <h3>Diagramme de classe pour le patron de Constructeur</h3>
     <img src="./design/ClassDiagram-Builder.png" alt="Diagramme de Classe pour le patron de constructeur">
