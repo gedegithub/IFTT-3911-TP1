@@ -29,6 +29,10 @@
         pre {
             font-size: 25px;
         }
+
+        p {
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -89,58 +93,72 @@
         <tbody>
             <tr>
                 <td class="first_col">
-                    Modèle du domaine
+                    Révision de modèle du domaine
                 </td>
                 <td>
-                    Classes, Design, Diagrammes (50%)
+                    (50%)
                 </td>
                 <td>
-                    Classes, Design, Diagrammes (50%)
+                    (50%)
                 </td>
                 <td>
-                    Design, Contraintes OCL (20%)
+                    0 %
                 </td>
             </tr>
             <tr>
                 <td class="first_col">
-                    Diagramme Séquence Système
+                    Diagrammes de Classe
                 </td>
                 <td>
-                    Admin (50%)
+                    Fabrique, Singleton, Etat, Observateur, Visiteur (55%)
                 </td>
                 <td>
-                    Client (30%)
+                    Commande, Memento, Builder et Diagramme de paquets (45%)
                 </td>
                 <td>
-                    Admin / Client (20%)
+                    (0%)
                 </td>
             </tr>
             <tr>
                 <td class="first_col">
-                    Modèle du design
+                    Diagramme de Sequence
                 </td>
                 <td>
-                    Méthodes & Diagramme Séquence Payer (100%)
+                    Fabrique, Singleton, Etat, Observateur, Visiteur (55%)
                 </td>
                 <td>
-                    Logique & Diagramme Séquence Consulter (100%)
+                    Commande, Memento, Builder (45%)
                 </td>
                 <td>
-                    Diagramme Séquence Reserver (100%)
+                    (0%)
                 </td>
             </tr>
             <tr>
                 <td class="first_col">
-                    OCL
+                    Discussion et justifiacation de la qualité du design
                 </td>
                 <td>
-                    (30%)
+                    (50%)
                 </td>
                 <td>
-                    (40%)
+                    (50%)
                 </td>
                 <td>
-                    (30%)
+                    (0%)
+                </td>
+            </tr>
+            <tr>
+                <td class="first_col">
+                    Génération de code et implémentation du système en java
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (50%)
+                </td>
+                <td>
+                    (0%)
                 </td>
             </tr>
         </tbody>
@@ -149,61 +167,105 @@
         Système de réservation de voyages</h1>
 
     <h2>Diagramme de Design du système avec les 8 Patrons de conception</h2>
-    <img src="./design/design-systeme.png" alt="Design du Système">
+    <img src="./design/ModeleDesign.png" alt="Modèle du Design">
     <hr>
     <h2>Discussion de la qualité de conception</h2>
-    <p>Principes et evaluation de conception</p>
+    <p>Avec l'intégration des patrons de conception, on a su largement amélioré la qualité de notre design. En effet,
+        les patrons s'adhèrent beaucoup aux principes de conception qui sont comme des règles d'or a appliquer afin de
+        parvenir a un bon design.
+        Toutefois, on a fait certains compromis dans le choix des patrons, puisque ceux-ci ont aussi leurs limitations.
+        Dans les lignes subséquentes, on va voir plus en détails comment chaque patron a contribué à l'amélioration de
+        notre design.
+    </p>
+    <hr>
+    <h2>Design Logiciel</h2>
+    <h3>Diagramme de classe pour le patron de Fabrique Abstraite</h3>
+    <img src="./design/ClassDiagram-AbstractFactory.png" alt="Diagramme de Classe pour patron de Fabrique Abstraite">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de Fabrique Abstraite</h3>
+    <img src="./design/SequenceDiagram-AbastractFabric.png"
+        alt="Diagramme de Séquence pour le patron de Fabrique Abstraite">
+    <hr>
+    <p>
+        La Fabrique Abstraite s'avère un bon choix dans l'éventuel cas de changement au niveau des familles de produits.
+        En effet, ce patron permet la maintenance, car respecte le principe d'OCP (ajout d'autres familles). Aussi, on
+        peut reutiliser les fabriques en dehors de l'application meme. Et, le DIP est respecté également. En effet,
+        les fabriques concrètes dependent de la fabrique abstraite et au lieu de faire appel à l'operation new, on
+        invoque les méthodes de fabrication. Et, en deleguant l'instanciation des objets à fabriquer aux fabriques
+        concrètes, on applique le SRP dans les fabriques. Ce qui contribue somme toute à une très bonne cohésion au
+        niveau des fabriques. C'est sûr qu'une forte cohésion entraine un faible couplage, mais c'est un compromis qui
+        vaut la peine.
+    </p>
+    <hr>
+    <h3>Diagramme de classe pour le patron de Singleton</h3>
+    <img src="./design/ClassDiagram-Singleton.png" alt="Diagramme de Classe pour patron de singleton">
+    <hr>
+    <p>
+        En ayant des singletons pour fabriques, on garantit une seule instance ces classes.C'est en fait une meilleure
+        utilisation de la mémoire. D'autre part, on permet un point d'accès global pour les fabriques qui en effet
+        peuvent être appelées de partout dans l'application par des classes expertes ou clientes. Ce qui offre au code
+        un aspect sécuritaire, grâce a ce contrôle d'accès. Ce patron finalement, contrairement aux methodes statiques,
+        facilite le changement à travers le polymorphisme ainsi que le passage par référence.
+    </p>
+
+    <h3>Diagramme de classe pour le patron d'état</h3>
+    <img src="./design/ClassDiagram-State.png" alt="Diagramme de Classe pour patron de d'état">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de d'état</h3>
+    <img src="./design/SequenceDiagram-State.png" alt="Diagramme de Séquence pour le patron d'état">
+    <hr>
+    <p>
+
+    </p>
+
+    <h3>Diagramme de classe pour le patron d'Observateur</h3>
+    <img src="./design/ClassDiagram-Observer.png" alt="Diagramme de Classe pour patron d'observateur">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron d'Observateur</h3>
+    <img src="./design/SequenceDiagram-Observer.png" alt="Diagramme de Séquence pour le patron de l'observateur">
+    <hr>
+    <p>
+
+    </p>
+    <hr>
+    <h3>Diagramme de classe pour le patron de Commande</h3>
+    <img src="./design/ClassDiagram-Command.png" alt="Diagramme de Classe pour patron de de commande">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de Commande</h3>
+    <img src="./design/SequenceDiagram-Commande.png" alt="Diagramme de Séquence pour le patron de commande">
+    <hr>
+    <p>
+
+    </p>
+    <h3>Diagramme de Séquence pour le patron de Memento</h3>
+    <img src="./design/SequenceDiagram-Memento.png" alt="Diagramme de Séquence pour le patron de Memento">
+    <hr>
+    <p>
+
+    </p>
+    <h3>Diagramme de classe pour le patron de Visiteur</h3>
+    <img src="./design/ClassDiagram-Visitor.png" alt="Diagramme de Classe pour patron de de visiteur">
+    <hr>
+    <h3>Diagramme de Séquence pour le patron de Visiteur</h3>
+    <img src="./design/SequenceDiagram-Visitor.png" alt="Diagramme de Séquence pour le patron de visiteur">
+    <hr>
+    <p>
+
+    </p>
+    <h3>Diagramme de classe pour le patron de Constructeur</h3>
+    <img src="./design/ClassDiagram-Builder.png" alt="Diagramme de Classe pour le patron de constructeur">
+    <hr>
+    <p>
+
+    </p>
     <h2>Diagramme de Paquets</h2>
     <img src="./design/diagramme-paquet.png" alt="Diagramme de Paquet">
     <hr>
-    <h2>Design Logiciel</h2>
-    <h3>Diagramme de classe pour le patron de fabriques</h3>
-    <img src="./design/diagrammeC-fabrique.png" alt="Diagramme de Classe pour patron de fabrique">
-    <hr>
-    <h3>Diagramme de Séquence pour le patron de fabriques</h3>
-    <img src="./design/diagrammeS-fabrique.png" alt="Diagramme de Séquence pour le patron de fabrique">
-    <hr>
+    <p>
 
-    <h3>Diagramme de classe pour le patron de singleton</h3>
-    <img src="./design/diagrammeC-singleton.png" alt="Diagramme de Classe pour patron de singleton">
-    <hr>
-    <!-- <h3>Diagramme de Séquence pour le patron de singleton</h3>
-    <img src="./design/diagrammeS-fabrique.png" alt="Diagramme de Séquence pour le patron de singleton">
-    <hr> -->
-
-    <h3>Diagramme de classe pour le patron d'état</h3>
-    <img src="./design/diagrammeC-etat.png" alt="Diagramme de Classe pour patron de d'état">
-    <hr>
-    <h3>Diagramme de Séquence pour le patron de d'état</h3>
-    <img src="./design/diagrammeS-etat.png" alt="Diagramme de Séquence pour le patron d'état">
-    <hr>
-
-    <h3>Diagramme de classe pour le patron de l'observateur</h3>
-    <img src="./design/diagrammeC-observateur.png" alt="Diagramme de Classe pour patron de l'observateur">
-    <hr>
-    <h3>Diagramme de Séquence pour le patron de l'observateur</h3>
-    <img src="./design/diagrammeS-observateur.png" alt="Diagramme de Séquence pour le patron de l'observateur">
-    <hr>
-
-    <h3>Diagramme de classe pour le patron de commande</h3>
-    <img src="./design/diagrammeC-commande.png" alt="Diagramme de Classe pour patron de de commande">
-    <hr>
-    <h3>Diagramme de Séquence pour le patron de commande</h3>
-    <img src="./design/diagrammeS-commande.png" alt="Diagramme de Séquence pour le patron de commande">
-    <hr>
-
-    <h3>Diagramme de classe pour le patron de visiteur</h3>
-    <img src="./design/diagrammeC-visiteur.png" alt="Diagramme de Classe pour patron de de visiteur">
-    <hr>
-    <h3>Diagramme de Séquence pour le patron de visiteur</h3>
-    <img src="./design/diagrammeS-visiteur.png" alt="Diagramme de Séquence pour le patron de visiteur">
-    <hr>
-
-    <h3>Diagramme de classe pour les 2 patrons additionnels</h3>
-    <img src="./design/diagrammeC-patron1&2.png" alt="Diagramme de Classe pour les 2 patrons additionnels">
-    <hr>
+    </p>
     <h2>
-        Contraintes OCL.</h2>
+        Annexes: Contraintes OCL.</h2>
     <pre>
         <strong>1) Le id d'une `Airport` doit être composé de 3 lettres uniques à chaque aéroport</strong>
         
