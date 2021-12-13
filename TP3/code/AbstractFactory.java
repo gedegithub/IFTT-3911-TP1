@@ -1,8 +1,6 @@
 public abstract class AbstractFactory {
 
-	private AbstractFactory factoryInstance;
-
-	public AbstractSatation createSation() {
+	public AbstractStation createStation() {
 		// TODO - implement AbstractFactory.createSation
 		throw new UnsupportedOperationException();
 	}
@@ -26,9 +24,6 @@ public abstract class AbstractFactory {
 		throw new UnsupportedOperationException();
 	}
 
-	public AbstractFactory getInstance() {
-		// TODO - implement AbstractFactory.getInstance
-		throw new UnsupportedOperationException();
-	}
+
 
 }

@@ -1,8 +1,8 @@
 public class SystemMemento {
 
-	private State SystemState;
+	private SeatState SystemState;
 
-	public State getState() {
+	public SeatState getState() {
 		// TODO - implement SystemMemento.getState
 		throw new UnsupportedOperationException();
 	}
@@ -11,7 +11,7 @@ public class SystemMemento {
 	 * 
 	 * @param state
 	 */
-	public void setState(State state) {
+	public void setState(SeatState state) {
 		// TODO - implement SystemMemento.setState
 		throw new UnsupportedOperationException();
 	}

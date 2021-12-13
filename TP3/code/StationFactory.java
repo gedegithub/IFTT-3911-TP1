@@ -1,18 +1,25 @@
 public class StationFactory extends AbstractFactory {
+	private static StationFactory instance;
 
 	private StationFactory() {
 		// TODO - implement StationFactory.StationFactory
 		throw new UnsupportedOperationException();
 	}
 
-	public AbstractStation createStation() {
-		// TODO - implement StationFactory.createStation
-		throw new UnsupportedOperationException();
+	public static StationFactory getInstance() {
+		if(instance == null) return new StationFactory();
+		return instance;
 	}
 
-	public AbstractFactory getInstance() {
-		// TODO - implement StationFactory.getInstance
-		throw new UnsupportedOperationException();
+	public AbstractStation createPort() {
+		return new Port();
 	}
 
+	public AbstractStation createAirport() {
+		return new Airport();
+	}
+
+	public AbstractStation createTrainStation() {
+		return new TrainStation();
+	}
 }

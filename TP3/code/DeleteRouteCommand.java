@@ -1,8 +1,13 @@
-public class DeleteRouteCommand implements AdminCommandsd {
+public class DeleteRouteCommand implements AdminCommand {
 
 	public void execute() {
 		// TODO - implement DeleteRouteCommand.execute
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void establishMemento() {
+
 	}
 
 	public void deleteRoute() {

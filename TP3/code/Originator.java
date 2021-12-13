@@ -1,6 +1,8 @@
+import javax.swing.plaf.nimbus.State;
+
 public class Originator {
 
-	private State State;
+	private State state;
 
 	public SystemMemento establish() {
 		// TODO - implement Originator.establish

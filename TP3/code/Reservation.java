@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Reservation {
 
 	private String reservation_id;

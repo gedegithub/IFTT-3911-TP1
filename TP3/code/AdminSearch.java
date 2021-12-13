@@ -9,6 +9,11 @@ public class AdminSearch implements VisitorRoute {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public void visiFlight(Flight flight) {
+
+	}
+
 	/**
 	 * 
 	 * @param trajectory
@@ -16,6 +21,11 @@ public class AdminSearch implements VisitorRoute {
 	public void visitTrajectory(Trajectory trajectory) {
 		// TODO - implement AdminSearch.visitTrajectory
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void visitItineray(Itinerary itinerary) {
+
 	}
 
 	/**

@@ -4,7 +4,7 @@ public class Trajectory extends AbstractRoute {
 	 * 
 	 * @param v
 	 */
-	public void accept(VisiteurRoute v) {
+	public void accept(VisitorRoute v) {
 		// TODO - implement Trajectory.accept
 		throw new UnsupportedOperationException();
 	}

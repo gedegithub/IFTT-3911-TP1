@@ -1,4 +1,4 @@
-public interface AdminCommandsd {
+public interface AdminCommand {
 
 	void execute();
 

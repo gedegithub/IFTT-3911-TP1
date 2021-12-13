@@ -1,4 +1,4 @@
-public class Observer {
+public abstract class Observer {
 
 	public void update() {
 		// TODO - implement Observer.update

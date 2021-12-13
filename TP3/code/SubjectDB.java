@@ -8,7 +8,7 @@ public interface SubjectDB {
 	 * 
 	 * @param o
 	 */
-	void attach(Ovserver o);
+	void attach(Observer o);
 
 	/**
 	 * 
@@ -16,6 +16,6 @@ public interface SubjectDB {
 	 */
 	void detach(Observer o);
 
-	void notify();
+	void notifyObservers();
 
 }

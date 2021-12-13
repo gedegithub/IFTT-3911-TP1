@@ -1,8 +1,13 @@
-public class CreateCraftCommand implements AdminCommandsd {
+public class CreateCraftCommand implements AdminCommand {
 
 	public void execute() {
 		// TODO - implement CreateCraftCommand.execute
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void establishMemento() {
+
 	}
 
 	public void createCraft() {

@@ -1,6 +1,9 @@
+import java.util.Collection;
+import java.util.List;
+
 public class DataStructureRoute implements SubjectDB {
 
-	private List<AsbstractRoute> routes;
+	private List<AbstractRoute> routes;
 	private SeatState state;
 
 	public List<AbstractRoute> getRoutes() {
@@ -21,4 +24,24 @@ public class DataStructureRoute implements SubjectDB {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public Collection<Observer> getObservers() {
+		return null;
+	}
+
+
+	@Override
+	public void attach(Observer o) {
+
+	}
+
+	@Override
+	public void detach(Observer o) {
+
+	}
+
+	@Override
+	public void notifyObservers() {
+
+	}
 }

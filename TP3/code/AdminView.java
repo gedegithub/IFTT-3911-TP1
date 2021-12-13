@@ -1,6 +1,6 @@
 public class AdminView extends Observer {
 
-	private State state;
+	private SeatState state;
 
 	public void consulterRoute() {
 		// TODO - implement AdminView.consulterRoute

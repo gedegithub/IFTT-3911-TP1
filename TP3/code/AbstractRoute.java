@@ -1,7 +1,10 @@
+import java.sql.Time;
+import java.util.Date;
+
 public abstract class AbstractRoute {
 
-	protected String route_id;
-	protected float price;
+	private String route_id;
+	private float price;
 	private Date departureDate;
 	private Date arrivalDate;
 	private Time departureTime;

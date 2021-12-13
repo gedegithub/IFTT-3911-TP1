@@ -1,3 +1,6 @@
+import java.sql.Time;
+import java.util.Date;
+
 public class RouteDescription {
 
 	public Date departureDate;

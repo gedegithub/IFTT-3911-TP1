@@ -1,8 +1,13 @@
-public class CreateRouteCommand implements AdminCommandsd {
+public class CreateRouteCommand implements AdminCommand {
 
 	public void execute() {
 		// TODO - implement CreateRouteCommand.execute
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void establishMemento() {
+
 	}
 
 	public void createRoute() {

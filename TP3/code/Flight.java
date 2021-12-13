@@ -1,3 +1,5 @@
+import java.sql.Time;
+
 public class Flight extends AbstractRoute {
 
 	private Time duration;
@@ -6,7 +8,7 @@ public class Flight extends AbstractRoute {
 	 * 
 	 * @param v
 	 */
-	public void accept(VisiteurRoute v) {
+	public void accept(VisitorRoute v) {
 		// TODO - implement Flight.accept
 		throw new UnsupportedOperationException();
 	}
